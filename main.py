@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Force TensorFlow to use CPU
+
 """
 ML-Based Real-Time E-Healthcare Monitoring System
 Project Charter Implementation
