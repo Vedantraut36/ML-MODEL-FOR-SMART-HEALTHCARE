@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250608_203336",
+  "metrics": {
+    "binary_accuracy": 0.986,
+    "multiclass_accuracy": 0.7,
+    "risk_accuracy": 0.762
+  },
+  "ensemble_mode": false,
+  "model_files": {
+    "scaler": "scaler_20250608_203336.pkl",
+    "label_encoder": "label_encoder_20250608_203336.pkl",
+    "binary_classifier": "binary_classifier_20250608_203336.pkl",
+    "multiclass_classifier": "multiclass_classifier_20250608_203336.pkl",
+    "risk_predictor": "risk_predictor_20250608_203336.pkl"
+  }
+}

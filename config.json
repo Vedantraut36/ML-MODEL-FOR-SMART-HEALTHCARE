@@ -1,0 +1,59 @@
+{
+  "model_config": {
+    "data_generation": {
+      "n_samples": 10000,
+      "normal_ratio": 0.7,
+      "random_seed": 42
+    },
+    "vital_sign_ranges": {
+      "heart_rate": {
+        "normal": [60, 100],
+        "tachycardia": [110, 180],
+        "bradycardia": [30, 50]
+      },
+      "spo2": {
+        "normal": [95, 100],
+        "hypoxia": [70, 90]
+      },
+      "temperature": {
+        "normal": [36.5, 37.5],
+        "fever": [38.5, 42.0],
+        "hypothermia": [35.0, 36.0]
+      }
+    },
+    "model_parameters": {
+      "logistic_regression": {
+        "random_state": 42,
+        "max_iter": 1000
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "random_state": 42,
+        "max_depth": 10
+      },
+      "neural_network": {
+        "hidden_layer_sizes": [100, 50],
+        "max_iter": 500,
+        "random_state": 42
+      },
+      "lstm": {
+        "sequence_length": 10,
+        "units": 50,
+        "dropout": 0.2
+      }
+    },
+    "performance_targets": {
+      "heart_rate_anomaly_detection": 0.94,
+      "temperature_forecasting": 0.96,
+      "spo2_risk_classification": 0.92,
+      "prediction_latency_seconds": 0.8,
+      "alert_response_time_seconds": 2.0
+    },
+    "risk_scoring": {
+      "low_risk": [0, 25],
+      "medium_risk": [25, 50],
+      "high_risk": [50, 75],
+      "critical_risk": [75, 100]
+    }
+  }
+}

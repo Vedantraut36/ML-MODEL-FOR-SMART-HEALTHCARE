@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "vercel_api.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb",
+        "maxDuration": 30
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "vercel_api.py"
+    }
+  ],
+  "env": {
+    "PYTHONPATH": "/var/task",
+    "ENVIRONMENT": "production"
+  },
+  "outputDirectory": ".",
+  "installCommand": "pip install -r requirements-vercel.txt"
+}
