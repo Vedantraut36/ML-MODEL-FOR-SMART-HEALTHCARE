@@ -1,0 +1,7 @@
+saved_models/
+frontend/
+*.pyc
+__pycache__/
+*.ipynb
+.github/
+README.md
